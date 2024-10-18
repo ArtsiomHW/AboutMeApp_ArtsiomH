@@ -8,23 +8,19 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    
-    // MARK: - IBOutlets
+
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
     @IBOutlet var loginStackView: UIStackView!
-    
-    // MARK: - Properties
+
     var isKeyboardShown = false
-    
-    // MARK: - Lifecycle Methods
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupKeyboardHandling()
     }
-    
-    // MARK: - Navigation
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let mainVC = segue.destination as? WelcomeViewController else {return}
         mainVC.userName = userNameTF.text
@@ -42,8 +38,7 @@ class MainViewController: UIViewController {
         userNameTF.text = ""
         passwordTF.text = ""
     }
-    
-    // MARK: - Restore login and password
+
     @IBAction func forgotUsernameButton() {
         showAlert(withTitle: "Ooops!", andMessage: "Your user name is Qwerty 🤫")
     }
@@ -52,8 +47,7 @@ class MainViewController: UIViewController {
         showAlert(withTitle: "Ooops!", andMessage: "Your password is 12345 🤫")
     }
     
-    
-    // MARK: - Private Methods
+
     private func showAlert(withTitle title: String, andMessage message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
@@ -65,7 +59,6 @@ class MainViewController: UIViewController {
     }
 }
 
-// MARK: - Keyboard handling logic
 private extension MainViewController {
 
     @objc func keyboardWillShow(notification: NSNotification) {
