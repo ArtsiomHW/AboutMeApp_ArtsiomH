@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="p5F-T4-P61">
-                                <rect key="frame" x="24" y="338" width="345" height="176.33333333333337"/>
+                                <rect key="frame" x="24" y="303" width="345" height="176.33333333333337"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="skR-iA-SKS">
                                         <rect key="frame" x="0.0" y="0.0" width="345" height="34.333333333333336"/>
@@ -46,16 +46,16 @@
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Forgot username?"/>
                                                 <connections>
-                                                    <action selector="forgotUsernameButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="U76-1n-JmQ"/>
+                                                    <action selector="forgotUserCredentials:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1iV-5H-Yml"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkI-P2-GRe">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkI-P2-GRe">
                                                 <rect key="frame" x="174.33333333333337" y="0.0" width="170.66666666666663" height="34.333333333333336"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Forgot Password?"/>
                                                 <connections>
-                                                    <action selector="forgotPasswordButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="orA-cq-S3o"/>
+                                                    <action selector="forgotUserCredentials:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OJl-8T-lq2"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -68,16 +68,12 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p5F-T4-P61" secondAttribute="trailing" constant="24" id="6Er-la-QSN"/>
-                            <constraint firstItem="p5F-T4-P61" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8cu-Fy-K3V"/>
+                            <constraint firstItem="p5F-T4-P61" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-35" id="8cu-Fy-K3V"/>
                             <constraint firstItem="p5F-T4-P61" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="OPR-LP-oZa"/>
                             <constraint firstItem="p5F-T4-P61" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gld-YK-vT3"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="e3b-ay-vyw" appends="YES" id="7uR-bA-9vc"/>
-                        </connections>
                     </view>
                     <connections>
-                        <outlet property="loginStackView" destination="p5F-T4-P61" id="uXS-M7-96q"/>
                         <outlet property="passwordTF" destination="cTg-Pu-EvH" id="SfX-Oa-Uhb"/>
                         <outlet property="userNameTF" destination="skR-iA-SKS" id="38d-xN-vZ7"/>
                     </connections>
@@ -94,7 +90,7 @@
         <!--Welcome View Controller-->
         <scene sceneID="5di-7l-35k">
             <objects>
-                <viewController id="7Zd-oE-eiZ" customClass="WelcomeViewController" customModule="AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7Zd-oE-eiZ" customClass="WelcomeViewController" customModule="AboutMeAppAH" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wqm-rT-rk8">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -148,7 +144,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eOl-Qu-Ry0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="mOf-1j-sex" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="852.27272727272737" y="2.510460251046025"/>
+            <point key="canvasLocation" x="836" y="-2"/>
         </scene>
     </scenes>
     <resources>
