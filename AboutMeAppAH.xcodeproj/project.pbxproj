@@ -16,7 +16,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		A22C240B2CC454C0000AF0FB /* Exceptions for "AboutMeAppAH" folder in "AboutMeAppAH" target */ = {
+		A2B50BC72CC5555700F0BFFA /* Exceptions for "AboutMeAppAH" folder in "AboutMeAppAH" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				App/Info.plist,
@@ -29,7 +29,7 @@
 		A2AD08E82CBD1CB30010BE62 /* AboutMeAppAH */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				A22C240B2CC454C0000AF0FB /* Exceptions for "AboutMeAppAH" folder in "AboutMeAppAH" target */,
+				A2B50BC72CC5555700F0BFFA /* Exceptions for "AboutMeAppAH" folder in "AboutMeAppAH" target */,
 			);
 			path = AboutMeAppAH;
 			sourceTree = "<group>";
