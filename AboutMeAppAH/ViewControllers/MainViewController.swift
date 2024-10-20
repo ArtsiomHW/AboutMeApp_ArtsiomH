@@ -12,19 +12,27 @@ class MainViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    private let userName = "Qwerty"
-    private let password = "12345"
+    private let user = User.getCredentials()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        userNameTF.text = userName
-        passwordTF.text = password
+        userNameTF.text = user.login
+        passwordTF.text = user.password
+        print("Debug: Setting user in prepare method: \(user.userInfo.name)")
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let mainVC = segue.destination as? WelcomeViewController else {return}
-        mainVC.userName = userName
+        let tabBarVC = segue.destination as? UITabBarController
+        
+        tabBarVC?.viewControllers?.forEach({ viewController in
+            if let welcome = viewController as? WelcomeViewController {
+                welcome.user = user
+            } else if let navigationVC = viewController as? UINavigationController {
+                let aboutVC = navigationVC.topViewController as? AboutMeViewController
+                aboutVC?.user = user
+            }
+        })
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -33,7 +41,7 @@ class MainViewController: UIViewController {
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        guard userNameTF.text == userName, passwordTF.text == password else {
+        guard userNameTF.text == user.login, passwordTF.text == user.password else {
             showAlert(
                 withTitle: "Invalid login or password",
                 andMessage: "Please, enter correct login and password") {
@@ -51,8 +59,8 @@ class MainViewController: UIViewController {
     
     @IBAction func forgotUserCredentials(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(withTitle: "Ooops!", andMessage: "Your user name is \(userName) 🤫")
-        : showAlert(withTitle: "Ooops!", andMessage: "Your password is \(password) 🤫")
+        ? showAlert(withTitle: "Ooops!", andMessage: "Your user name is \(user.login) 🤫")
+        : showAlert(withTitle: "Ooops!", andMessage: "Your password is \(user.password) 🤫")
     }
     
     private func showAlert(

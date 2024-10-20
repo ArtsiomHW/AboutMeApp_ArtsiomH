@@ -6,15 +6,20 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A2BCD33C2CC3BB8E0043BF2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2BCD3342CC3BB8E0043BF2D /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		A2AD08E62CBD1CB30010BE62 /* AboutMeAppAH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AboutMeAppAH.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2BCD3342CC3BB8E0043BF2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		A2AD08F82CBD1CB40010BE62 /* Exceptions for "AboutMeAppAH" folder in "AboutMeAppAH" target */ = {
+		A22C240B2CC454C0000AF0FB /* Exceptions for "AboutMeAppAH" folder in "AboutMeAppAH" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				App/Info.plist,
 			);
 			target = A2AD08E52CBD1CB30010BE62 /* AboutMeAppAH */;
 		};
@@ -24,7 +29,7 @@
 		A2AD08E82CBD1CB30010BE62 /* AboutMeAppAH */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				A2AD08F82CBD1CB40010BE62 /* Exceptions for "AboutMeAppAH" folder in "AboutMeAppAH" target */,
+				A22C240B2CC454C0000AF0FB /* Exceptions for "AboutMeAppAH" folder in "AboutMeAppAH" target */,
 			);
 			path = AboutMeAppAH;
 			sourceTree = "<group>";
@@ -46,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				A2AD08E82CBD1CB30010BE62 /* AboutMeAppAH */,
+				A2BCD3342CC3BB8E0043BF2D /* Assets.xcassets */,
 				A2AD08E72CBD1CB30010BE62 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -122,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2BCD33C2CC3BB8E0043BF2D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +154,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AP6UP6P7WQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AboutMeAppAH/Info.plist;
+				INFOPLIST_FILE = AboutMeAppAH/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -175,7 +182,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AP6UP6P7WQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AboutMeAppAH/Info.plist;
+				INFOPLIST_FILE = AboutMeAppAH/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
