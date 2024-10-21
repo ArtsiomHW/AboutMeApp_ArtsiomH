@@ -79,11 +79,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="e3b-ay-vyw">
-                    <connections>
-                        <action selector="closeKeyBoardTapGesture:" destination="BYZ-38-t0r" id="Eej-FK-sob"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="139" y="-2"/>
         </scene>
@@ -145,7 +140,7 @@
                             <constraint firstItem="jCw-kI-Xc9" firstAttribute="centerX" secondItem="wqm-rT-rk8" secondAttribute="centerX" id="t8P-cy-MLl"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Greeting" image="iphone.and.arrow.right.outward" catalog="system" id="ntu-Bm-S5v"/>
+                    <tabBarItem key="tabBarItem" title="Greeting" image="person" catalog="system" id="ntu-Bm-S5v"/>
                     <connections>
                         <outlet property="greetingMessageLabel" destination="tmC-sk-Fgy" id="7Ev-hm-3kS"/>
                         <outlet property="yourNameIsLabel" destination="jCw-kI-Xc9" id="oor-gl-IWt"/>
@@ -399,7 +394,7 @@
     </scenes>
     <resources>
         <image name="BG" width="742" height="1620"/>
-        <image name="iphone.and.arrow.right.outward" catalog="system" width="125" height="128"/>
+        <image name="person" catalog="system" width="128" height="121"/>
         <image name="person.text.rectangle" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

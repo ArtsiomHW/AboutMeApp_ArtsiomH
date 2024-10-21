@@ -12,14 +12,13 @@ class MainViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    private let user = User.getCredentials()
+    private let user = User.getUser()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         userNameTF.text = user.login
         passwordTF.text = user.password
-        print("Debug: Setting user in prepare method: \(user.userInfo.name)")
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

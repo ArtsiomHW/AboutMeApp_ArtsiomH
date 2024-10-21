@@ -11,14 +11,14 @@ class InfoViewController: UIViewController {
     
     @IBOutlet var summaryTextView: UITextView!
     
-    var user: User?
+    var user: User!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = (user?.userInfo.name ?? " ") + " " + (user?.userInfo.surname ?? " ")
+        self.title = user.userInfo.fullname
         
-        summaryTextView.text = user?.userInfo.summary
+        summaryTextView.text = user.userInfo.summary
     }
     
 }

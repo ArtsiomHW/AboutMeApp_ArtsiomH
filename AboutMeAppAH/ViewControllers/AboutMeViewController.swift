@@ -17,21 +17,21 @@ class AboutMeViewController: UIViewController {
     
     @IBOutlet var avatarImageView: UIImageView!
     
-    var user: User?
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = (user?.userInfo.name ?? " ") + " " + (user?.userInfo.surname ?? " ")
+        self.title = user.userInfo.fullname
         
         avatarImageView.layer.cornerRadius = avatarImageView.frame.height / 2
-        avatarImageView.image = UIImage(named: user?.userInfo.avatar ?? " ")
+        avatarImageView.image = UIImage(named: user.userInfo.avatar)
         
-        nameLabel.text = user?.userInfo.name
-        surnameLabel.text = user?.userInfo.surname
-        companyLabel.text = user?.userInfo.company
-        departmentLabel.text = user?.userInfo.department
-        positionLabel.text = user?.userInfo.position
+        nameLabel.text = user.userInfo.name
+        surnameLabel.text = user.userInfo.surname
+        companyLabel.text = user.userInfo.company
+        departmentLabel.text = user.userInfo.department
+        positionLabel.text = user.userInfo.position
         
     }
     
