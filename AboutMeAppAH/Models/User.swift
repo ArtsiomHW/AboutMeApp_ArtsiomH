@@ -28,7 +28,7 @@ struct UserInfo {
     let avatar: String
     let summary: String
     
-    var fullname: String {
+    var fullName: String {
         "\(name) \(surname)"
     }
     

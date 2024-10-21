@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+final class MainViewController: UIViewController {
     
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
@@ -20,7 +20,7 @@ class MainViewController: UIViewController {
         userNameTF.text = user.login
         passwordTF.text = user.password
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let tabBarVC = segue.destination as? UITabBarController
         

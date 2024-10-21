@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AboutMeViewController: UIViewController {
+final class AboutMeViewController: UIViewController {
     
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var surnameLabel: UILabel!
@@ -22,8 +22,8 @@ class AboutMeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = user.userInfo.fullname
-        
+        navigationItem.title = user.userInfo.fullName
+   
         avatarImageView.layer.cornerRadius = avatarImageView.frame.height / 2
         avatarImageView.image = UIImage(named: user.userInfo.avatar)
         
@@ -35,9 +35,9 @@ class AboutMeViewController: UIViewController {
         
     }
     
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            guard let infoVC = segue.destination as? InfoViewController else { return }
-            infoVC.user = user
-        }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let infoVC = segue.destination as? InfoViewController else { return }
+        infoVC.user = user
+    }
     
 }

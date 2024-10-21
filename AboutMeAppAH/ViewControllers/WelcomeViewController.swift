@@ -7,17 +7,17 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+final class WelcomeViewController: UIViewController {
     
     @IBOutlet var greetingMessageLabel: UILabel!
     @IBOutlet var yourNameIsLabel: UILabel!
     
-    var user: User?
+    var user: User!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        greetingMessageLabel.text = "Welcome, \(user?.login ?? " ")!"
-        yourNameIsLabel.text = "Your name is \(user?.userInfo.name ?? " ")."
+        greetingMessageLabel.text = "Welcome, \(user.login)!"
+        yourNameIsLabel.text = "Your name is \(user.userInfo.name)."
     }
 }

@@ -7,16 +7,16 @@
 
 import UIKit
 
-class InfoViewController: UIViewController {
+final class InfoViewController: UIViewController {
     
     @IBOutlet var summaryTextView: UITextView!
     
     var user: User!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = user.userInfo.fullname
+        self.title = user.userInfo.fullName
         
         summaryTextView.text = user.userInfo.summary
     }
